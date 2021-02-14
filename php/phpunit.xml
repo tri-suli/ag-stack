@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+    bootstrap="vendor/autoload.php"
+    colors="true"
+    defaultTimeLimit="0"
+    stopOnError="true"
+    verbose="true"
+>
+    <coverage
+        cacheDirectory="/tests/Coverage"
+        pathCoverage="true"
+    >
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+        <report>
+            <clover outputFile="test-clover.xml"/>
+            <crap4j outputFile="test-crap4j.xml" threshold="50"/>
+            <html outputDirectory="html-coverage" lowUpperBound="50" highLowerBound="90"/>
+            <text outputFile="test-coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>
+            <xml outputDirectory="xml-coverage"/>
+        </report>
+    </coverage>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory>tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

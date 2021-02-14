@@ -1,0 +1,25 @@
+{
+    "name": "trisuliprasetyo/stack",
+    "description": "Stack algorithm in php language",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "authors": [
+        {
+            "name": "Tri Suli Prasetyo",
+            "email": "trisuliprasetyo@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Stack\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Stack\\Tests\\": "test/"
+        }
+    },
+    "require": {}
+}
